@@ -30,7 +30,6 @@ class TestLoginPage(unittest.TestCase):
 	def test_run_2(self):
 		time.sleep(3)
 
-
 	def test_positive_login(self):
 		username_field = WebDriverWait(self.driver,10).until(EC.presence_of_element_located(
 			(By.ID, "username")
@@ -49,17 +48,6 @@ class TestLoginPage(unittest.TestCase):
 		expected_url = "https://practicetestautomation.com/logged-in-successfully/"
 		actual_url = self.driver.current_url
 		assert expected_url == actual_url, "URL verification faild"
-
-	#TEMA
-	def test_negative_username_login(self):
-		pass
-
-
-	#TEMA
-	def test_negative_password_logi(self):
-		pass
-
-
 
 	def tearDown(self):
 		self.driver.quit()
